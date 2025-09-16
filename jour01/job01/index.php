@@ -14,4 +14,13 @@ echo "$val";
 
 echo "<br>";
 $val +=4;
-echo "$val";
+echo $val;
+
+echo "<br>";
+$myBool = true;
+echo $myBool ? 'true' : 'false';
+
+echo "<br>";
+
+$myBool = false;
+echo $myBool ? 'true' : 'false';
