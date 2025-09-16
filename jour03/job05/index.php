@@ -9,10 +9,10 @@ $dic = [
 
 $voyelles = ['a', 'e', 'i', 'o', 'u', 'y', 'A', 'E', 'I', 'O', 'U', 'Y'];
 
-for ($i = 0, $i < strlen($str); $i++) {
+for ($i = 0; $i < strlen($str); $i++) {
 
     $char = $str[$i];
-    (ctype_alpha($char)){
+    if(ctype_alpha($char)){
         if (in_array($char,$voyelles)){
             $dic ["voyelles"]++;
         } else {
@@ -21,3 +21,7 @@ for ($i = 0, $i < strlen($str); $i++) {
     }
 }
 
+echo "<table border='1'>";
+echo "<thead><tr><th>Voyelles</th><th>Consonnes</th></tr></thead>";
+echo "<tbody><tr><td>{$dic['voyelles']}</td><td>{$dic['consonnes']}";
+echo "</table>";
