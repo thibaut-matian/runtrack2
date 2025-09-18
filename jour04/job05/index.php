@@ -1,5 +1,9 @@
+<form method="post">
+    <input type="text" name="username" placeholder="Username">
+    <input type="text" name="password" placeholder="password" required />
+    <input type="submit" value="Envoyer">
+</form>
 <?php
-
 if (!empty($_POST)) {
     $username = $_POST['username'] ?? '';
     $password = $_POST['password'] ?? '';
@@ -11,9 +15,3 @@ if (!empty($_POST)) {
 }
 
 ?>
-
-<form method="post">
-    <input type="text" name="username" placeholder="Username">
-    <input type="text" name="password" placeholder="password" required />
-    <input type="submit" value="Envoyer">
-</form>
