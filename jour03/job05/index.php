@@ -9,19 +9,34 @@ $dic = [
 
 $voyelles = ['a', 'e', 'i', 'o', 'u', 'y', 'A', 'E', 'I', 'O', 'U', 'Y'];
 
-for ($i = 0; $i < strlen($str); $i++) {
-
+$i = 0;
+while (isset($str[$i])) {
     $char = $str[$i];
-    if(ctype_alpha($char)){
-        if (in_array($char,$voyelles)){
-            $dic ["voyelles"]++;
+    // Vérifier si c'est une lettre (sans fonction)
+    if (
+        ($char >= 'a' && $char <= 'z') ||
+        ($char >= 'A' && $char <= 'Z')
+    ) {
+        // Vérifier si c'est une voyelle
+        $isVoyelle = false;
+        $j = 0;
+        while (isset($voyelles[$j])) {
+            if ($char == $voyelles[$j]) {
+                $isVoyelle = true;
+            }
+            $j++;
+        }
+        if ($isVoyelle) {
+            $dic["voyelles"]++;
         } else {
             $dic["consonnes"]++;
         }
     }
+    $i++;
 }
 
 echo "<table border='1'>";
 echo "<thead><tr><th>Voyelles</th><th>Consonnes</th></tr></thead>";
-echo "<tbody><tr><td>{$dic['voyelles']}</td><td>{$dic['consonnes']}";
+echo "<tbody><tr><td>{$dic['voyelles']}</td><td>{$dic['consonnes']}</td></tr></tbody>";
 echo "</table>";
+?>

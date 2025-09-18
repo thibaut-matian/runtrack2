@@ -3,14 +3,22 @@
 $str = "Certaines choses changent, et d'autres ne changeront jamais.";
 
 $result = "";
-$len = mb_strlen($str, 'UTF-8');
+$i = 0;
 
-for ($i = 0; $i < $len; $i++) {
+// Compter la longueur sans fonction
+while (isset($str[$i])) {
+    $i++;
+}
+$len = $i;
+
+$i = 0;
+while ($i < $len) {
     if ($i == $len - 1) {
-        $result .= mb_substr($str, 0, 1, 'UTF-8');
+        $result .= $str[0];
     } else {
-        $result .= mb_substr($str, $i + 1, 1, 'UTF-8');
+        $result .= $str[$i + 1];
     }
+    $i++;
 }
 
 echo $result;
