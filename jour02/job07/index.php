@@ -1,10 +1,33 @@
 <?php
+header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+header('Pragma: no-cache');
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;\<br />
+&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;\<br />
+&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<br />
+&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<br />
+&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<br />
+/______\
+<hr>
+
+
 <?php
 // $outerSpace = '';
 // $innerSpace = '';
 $LeftChar = '/';
 $RightChar = '\\';
-$Space = '  ';   // entités avec ';'
+$Space = '&nbsp;&nbsp;';   // entités avec ';'
 $Height = 8;
 
 // init (nécessaires car variables commentées)
@@ -20,7 +43,7 @@ for ($CountA; $CountA < $Height; $CountA++) {
         $outerSpace .= $Space;
     }
 
-    echo $outerSpace . " /" . $innerSpace . "\\" . "<br />";
+    echo $outerSpace . "&nbsp;/" . $innerSpace . "\\" . "<br />";
     $innerSpace .= $Space . $Space;
 }
 for ($CountB; $CountB < $Height; $CountB++) {
