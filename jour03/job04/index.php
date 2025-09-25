@@ -3,10 +3,10 @@
 $str = "Dans l'espace, personne ne vous entend crier.";
 
 $nbCaracters = 0;
-$i = 0;
-while (isset($str[$i])) {
+$parcourir  = 0;
+while (isset($str[$parcourir])) {
     $nbCaracters++;
-    $i++;
+    $parcourir++;
 }
 
 echo "Le nombre de caracteres dans la chaîne est de : $nbCaracters ";
