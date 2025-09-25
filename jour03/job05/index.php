@@ -12,6 +12,7 @@ $voyelles = ['a', 'e', 'i', 'o', 'u', 'y', 'A', 'E', 'I', 'O', 'U', 'Y'];
 $i = 0;
 while (isset($str[$i])) {
     $char = $str[$i];
+
     // Vérifier si c'est une lettre (sans fonction)
     if (
         ($char >= 'a' && $char <= 'z') ||
