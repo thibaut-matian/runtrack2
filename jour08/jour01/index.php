@@ -6,7 +6,7 @@ if (isset($_POST['reset'])) {
     $_SESSION['nbvisites'] = 0;
 }
 
-// Initialiser ou incrémenter le compteur de visites
+// Initialiser, incrémenter le compteur de visites
 if (isset($_SESSION['nbvisites'])) {
     $_SESSION['nbvisites']++;
 } else {
