@@ -12,4 +12,10 @@ while ($i >= 0) {
     echo $str[$i];
     $i--;
 }
+
+echo "<hr>";
+
+echo htmlspecialchars(strrev($str));
+
+
 ?>
